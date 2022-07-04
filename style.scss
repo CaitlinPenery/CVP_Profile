@@ -1,0 +1,53 @@
+@use "./palette";
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    padding-top: 10px;
+    padding-bottom: 30px;
+    padding-left: 30px;
+    background: palette.$color-three;
+    height: 50px;
+    width: 100%;
+
+    &__logo {
+        &--style1 {
+            font-size: 250%;
+            margin-top: 20px;
+            font-weight: bolder;
+        }
+        &--style2 {
+            font-size: 220%;
+            margin-top: 10px;
+            font-weight: bolder;
+            color: palette.$color-one;
+        }
+    }
+}
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.landing {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    flex-direction: column;
+}
+
+.about-me {
+}
+
+.skills {
+}
+
+.projects {
+}
