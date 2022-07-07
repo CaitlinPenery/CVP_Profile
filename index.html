@@ -3,33 +3,45 @@
     <head>
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+        />
         <link rel="stylesheet" href="style.css" />
-        <!-- Link to font style Ubuntu -->
+        <!-- Font and Icon links -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <!-- update below with correct title -->
-        <title>Caitlin Penery - Dev</title>
+        <title>Caitlin Penery | Dev</title>
     </head>
-    <body>
+    <body id="home">
         <header class="header">
-            <!-- Nav logo -->
-            <h2 class="header__logo--style1">C</h2>
-            <h2 class="header__logo--style2">|V|</h2>
-            <h2 class="header__logo--style1">P</h2>
+            <!-- header logo -->
+            <div class="header__logo">
+                <h2 class="header__logo--style1">C</h2>
+                <h2 class="header__logo--style2">|V|</h2>
+                <h2 class="header__logo--style1">P</h2>
+            </div>
+
             <!-- Add drop down menu -->
-            <div class="header__nav"></div>
+            <div class="header__drop-nav">
+                <button class="header__drop-nav--btn">Menu</button>
+                <div class="header__drop-nav--content">
+                    <a href="">About Me</a>
+                    <a href="">Skills</a>
+                    <a href="">Projects</a>
+                </div>
+            </div>
         </header>
         <!-- Content Container -->
         <div class="content">
             <!-- Landing Section -->
-            <section class="landing">
+            <section class="landing section-block">
                 <h1 class="landing__head head--right">Welcome</h1>
                 <h2>I'm Caitlin</h2>
-                <p>she/her</p>
                 <h3>Trainee Dev</h3>
             </section>
             <!-- About Me Section -->
-            <section class="about-me">
+            <section class="about-me section-block">
                 <h2 class="about-me__head">About Me</h2>
                 <div class="about-me__card">
                     <!-- Worky Experience Stuff -->
@@ -47,7 +59,7 @@
                 </div>
             </section>
             <!-- Skills Section -->
-            <section class="skills">
+            <section class="skills section-block">
                 <h2 class="skills__head">Skills</h2>
                 <div class="skills__card">
                     <p class="skills__card--text">HTML5</p>
@@ -69,7 +81,7 @@
                 </div>
             </section>
             <!-- Projects Section -->
-            <section class="projects">
+            <section class="projects section-block">
                 <h2 class="projects__head">Projects I've worked on</h2>
                 <!-- Seperate div for each project, each project has a title-->
                 <div class="project__group">
