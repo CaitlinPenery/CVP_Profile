@@ -8,28 +8,33 @@
 }
 // Header
 .header {
-    @include mixins.flex(column, center, center, nowrap);
-    padding-top: 10px;
-    padding-bottom: 30px;
-    background: palette.$color-three;
-    height: 15vh;
+    @include mixins.flex(row-reverse, space-between, center, nowrap);
+    background: palette.$color-four;
     width: 100vw;
+    height: 10vh;
+    position: fixed;
+    top: 0;
+    z-index: 2;
 
     &__logo {
         @include mixins.flex(row, center, center, nowrap);
+        padding-left: 20px;
         &--style1 {
             font-size: 250%;
-            margin-top: 20px;
+
             font-weight: bolder;
         }
         &--style2 {
             font-size: 220%;
-            margin-top: 10px;
+
             font-weight: bolder;
             color: palette.$color-one;
         }
     }
 
+    &__drop-nav {
+        padding-right: 30px;
+    }
     &__dropdown {
         &--btn {
             background-color: bisque;
@@ -72,8 +77,24 @@
 }
 // Skills
 .skills {
+    &__head {
+        font-size: 200%;
+        font-weight: bolder;
+        padding: 20px;
+        color: palette.$color-one;
+    }
     @include mixins.flex(column, center, center, nowrap);
     background-color: palette.$color-four;
+    &__card {
+        @include mixins.flex(column, center, center, nowrap);
+        padding: 10px;
+        &--item-icon {
+        }
+        &--text {
+            font-weight: bold;
+            padding-top: 5px;
+        }
+    }
 }
 // Projects
 .projects {

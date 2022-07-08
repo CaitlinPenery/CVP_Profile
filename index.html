@@ -10,26 +10,25 @@
         <link rel="stylesheet" href="style.css" />
         <!-- Font and Icon links -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <script
+            src="https://kit.fontawesome.com/24b9b1a07c.js"
+            defer
+            crossorigin="anonymous"
+        ></script>
         <!-- update below with correct title -->
         <title>Caitlin Penery | Dev</title>
     </head>
     <body id="home">
         <header class="header">
+            <!-- Add drop down menu -->
+            <div class="header__drop-nav">
+                <i class="fa-solid fa-bars fa-2x"></i>
+            </div>
             <!-- header logo -->
             <div class="header__logo">
                 <h2 class="header__logo--style1">C</h2>
                 <h2 class="header__logo--style2">|V|</h2>
                 <h2 class="header__logo--style1">P</h2>
-            </div>
-
-            <!-- Add drop down menu -->
-            <div class="header__drop-nav">
-                <button class="header__drop-nav--btn">Menu</button>
-                <div class="header__drop-nav--content">
-                    <a href="">About Me</a>
-                    <a href="">Skills</a>
-                    <a href="">Projects</a>
-                </div>
             </div>
         </header>
         <!-- Content Container -->
@@ -38,7 +37,7 @@
             <section class="landing section-block">
                 <h1 class="landing__head head--right">Welcome</h1>
                 <h2>I'm Caitlin</h2>
-                <h3>Trainee Dev</h3>
+                <h3>Software Developer</h3>
             </section>
             <!-- About Me Section -->
             <section class="about-me section-block">
@@ -62,21 +61,39 @@
             <section class="skills section-block">
                 <h2 class="skills__head">Skills</h2>
                 <div class="skills__card">
+                    <i
+                        class="fa-brands fa-html5 fa-3x skills__card--item-icon"
+                    ></i>
                     <p class="skills__card--text">HTML5</p>
                 </div>
                 <div class="skills__card">
+                    <i
+                        class="fa-brands fa-github-square fa-3x skills__card--item-icon"
+                    ></i>
                     <p class="skills__card--text">git</p>
                 </div>
                 <div class="skills__card">
+                    <i
+                        class="fa-brands fa-sass fa-3x skills__card--item-icon"
+                    ></i>
                     <p class="skills__card--text">SCSS</p>
                 </div>
                 <div class="skills__card">
-                    <p class="skills__card--text">CSS</p>
+                    <i
+                        class="fa-brands fa-css3-alt fa-3x skills__card--item-icon"
+                    ></i>
+                    <p class="skills__card--text">CSS3</p>
                 </div>
                 <div class="skills__card">
+                    <i
+                        class="fa-brands fa-js-square fa-3x skills__card--item-icon"
+                    ></i>
                     <p class="skills__card--text">JavaScript</p>
                 </div>
                 <div class="skills__card">
+                    <i
+                        class="fa-brands fa-react fa-3x skills__card--item-icon"
+                    ></i>
                     <p class="skills__card--text">React</p>
                 </div>
             </section>

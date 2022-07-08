@@ -6,15 +6,16 @@
 
 .header {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row-reverse;
+  justify-content: space-between;
   align-items: center;
   flex-wrap: nowrap;
-  padding-top: 10px;
-  padding-bottom: 30px;
-  background: #857671;
-  height: 15vh;
+  background: #e2ded3;
   width: 100vw;
+  height: 10vh;
+  position: fixed;
+  top: 0;
+  z-index: 2;
 }
 .header__logo {
   display: flex;
@@ -22,17 +23,19 @@
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
+  padding-left: 20px;
 }
 .header__logo--style1 {
   font-size: 250%;
-  margin-top: 20px;
   font-weight: bolder;
 }
 .header__logo--style2 {
   font-size: 220%;
-  margin-top: 10px;
   font-weight: bolder;
   color: #ff6d24;
+}
+.header__drop-nav {
+  padding-right: 30px;
 }
 .header__dropdown--btn {
   background-color: bisque;
@@ -91,6 +94,24 @@
   align-items: center;
   flex-wrap: nowrap;
   background-color: #e2ded3;
+}
+.skills__head {
+  font-size: 200%;
+  font-weight: bolder;
+  padding: 20px;
+  color: #ff6d24;
+}
+.skills__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  padding: 10px;
+}
+.skills__card--text {
+  font-weight: bold;
+  padding-top: 5px;
 }
 
 .projects {
