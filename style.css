@@ -75,7 +75,24 @@
   flex-wrap: nowrap;
   background-color: #e2ded3;
   padding-right: 60px;
-  padding-top: 80px;
+  padding-top: 200px;
+}
+.landing__head--one {
+  color: #ff6d24;
+  font-weight: bolder;
+  font-size: 200%;
+}
+.landing__head--two {
+  color: black;
+  font-weight: bold;
+  font-size: 220%;
+}
+.landing__head--three {
+  color: black;
+  font-size: 130%;
+}
+.landing__head--three-style {
+  color: #ff6d24;
 }
 
 .about-me {
@@ -85,6 +102,23 @@
   align-items: flex-end;
   flex-wrap: nowrap;
   background-color: #857671;
+  padding-top: 200px;
+  padding-right: 60px;
+}
+.about-me__head {
+  font-size: 200%;
+  font-weight: bolder;
+  padding-bottom: 20px;
+  color: #ff6d24;
+}
+.about-me__card {
+  height: 100px;
+  width: 240px;
+  text-align: right;
+  font-weight: bold;
+}
+.about-me__card--text {
+  padding-bottom: 15px;
 }
 
 .skills {
@@ -119,6 +153,49 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   background-color: #857671;
+}
+.projects__head {
+  font-size: 200%;
+  font-weight: bolder;
+  padding: 20px;
+  color: #ff6d24;
+}
+.projects__group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  padding: 10px;
+}
+.projects__group--image {
+  padding-bottom: 15px;
+}
+
+#code {
+  padding: 10px;
+}
+
+#rocket {
+  padding: 10px;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100vw;
+  align-content: center;
+  padding-left: 15px;
+  padding-bottom: 15px;
+}
+.footer__contact--icon {
+  padding: 10px;
 }

@@ -1,3 +1,12 @@
+// TBD mixin for padding & headings
+// Change of font.
+// Switch project placeholders with completed projects.
+// Switch placeholder text in about me secion.
+// Add layout for tablet and laptop+.
+// Add a darker orange to palette for headings on darker sections.
+// Add project desc in tablet & greater
+// Add text on hover for contact icons & disable color change
+
 @use "./partials/palette";
 @use "./partials/mixins";
 
@@ -68,36 +77,109 @@
     @include mixins.flex(column, top, flex-end, nowrap);
     background-color: palette.$color-four;
     padding-right: 60px;
-    padding-top: 80px;
+    padding-top: 200px;
+    &__head {
+        &--one {
+            color: palette.$color-one;
+            font-weight: bolder;
+            font-size: 200%;
+        }
+        &--two {
+            color: black;
+            font-weight: bold;
+            font-size: 220%;
+        }
+        &--three {
+            color: black;
+            font-size: 130%;
+            &-style {
+                color: palette.$color-one;
+            }
+        }
+    }
 }
 // About Me
 .about-me {
     @include mixins.flex(column, top, flex-end, nowrap);
     background-color: palette.$color-three;
+    padding-top: 200px;
+    padding-right: 60px;
+    &__head {
+        font-size: 200%;
+        font-weight: bolder;
+        padding-bottom: 20px;
+        color: palette.$color-one;
+    }
+    &__card {
+        height: 100px;
+        width: 240px;
+        text-align: right;
+        font-weight: bold;
+        &--text {
+            padding-bottom: 15px;
+        }
+    }
 }
 // Skills
 .skills {
+    @include mixins.flex(column, center, center, nowrap);
+    background-color: palette.$color-four;
     &__head {
         font-size: 200%;
         font-weight: bolder;
         padding: 20px;
         color: palette.$color-one;
     }
-    @include mixins.flex(column, center, center, nowrap);
-    background-color: palette.$color-four;
+
     &__card {
         @include mixins.flex(column, center, center, nowrap);
         padding: 10px;
-        &--item-icon {
-        }
         &--text {
             font-weight: bold;
             padding-top: 5px;
         }
     }
 }
+
 // Projects
 .projects {
-    @include mixins.flex(column, center, center, nowrap);
+    @include mixins.flex(column, center, center, wrap);
     background-color: palette.$color-three;
+    &__head {
+        font-size: 200%;
+        font-weight: bolder;
+        padding: 20px;
+        color: palette.$color-one;
+    }
+    &__group {
+        @include mixins.flex(column, center, center, nowrap);
+
+        padding: 10px;
+        &--image {
+            padding-bottom: 15px;
+        }
+    }
+}
+#code {
+    padding: 10px;
+}
+#rocket {
+    padding: 10px;
+}
+
+// Footer - contact info
+.footer {
+    @include mixins.flex(column, center, flex-start, nowrap);
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100vw;
+    align-content: center;
+    padding-left: 15px;
+    padding-bottom: 15px;
+    &__contact {
+        &--icon {
+            padding: 10px;
+        }
+    }
 }
