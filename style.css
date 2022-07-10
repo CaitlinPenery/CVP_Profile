@@ -16,9 +16,10 @@
   position: fixed;
   top: 0;
 }
-@media only screen and (max-width: 480px) and (orientation: landscape) {
+@media only screen and (max-width: 812px) and (orientation: landscape) {
   .header {
     padding-top: 20px;
+    height: 20vh;
   }
 }
 .header__drop-nav {
@@ -94,7 +95,7 @@
   padding-right: 60px;
   padding-top: 200px;
 }
-@media only screen and (max-width: 480px) and (orientation: landscape) {
+@media only screen and (max-width: 812px) and (orientation: landscape) {
   .landing {
     padding-top: 120px;
   }
@@ -127,7 +128,7 @@
   padding-top: 200px;
   padding-right: 60px;
 }
-@media only screen and (max-width: 480px) and (orientation: landscape) {
+@media only screen and (max-width: 812px) and (orientation: landscape) {
   .about-me {
     display: flex;
     flex-direction: column;
@@ -143,7 +144,7 @@
   padding-bottom: 20px;
   color: #ff6d24;
 }
-@media only screen and (max-width: 480px) and (orientation: landscape) {
+@media only screen and (max-width: 812px) and (orientation: landscape) {
   .about-me__head {
     font-size: 130%;
     padding: 15px;
@@ -158,12 +159,12 @@
 .about-me__card--text {
   padding-bottom: 15px;
 }
-@media only screen and (max-width: 480px) and (orientation: landscape) {
+@media only screen and (max-width: 812px) and (orientation: landscape) {
   .about-me__card--text {
     font-size: 100%;
   }
 }
-@media only screen and (max-width: 480px) and (orientation: landscape) {
+@media only screen and (max-width: 812px) and (orientation: landscape) {
   .about-me__card {
     text-align: center;
     font-size: 100%;
@@ -198,7 +199,7 @@
   padding-top: 5px;
 }
 
-@media only screen and (max-width: 480px) and (orientation: landscape) {
+@media only screen and (max-width: 812px) and (orientation: landscape) {
   .sklz {
     display: grid;
     grid-template-columns: auto auto auto;
@@ -228,7 +229,7 @@
   flex-wrap: nowrap;
   padding: 10px;
 }
-@media only screen and (max-width: 480px) and (orientation: landscape) {
+@media only screen and (max-width: 812px) and (orientation: landscape) {
   .projects__group {
     padding: 13px;
     align-items: center;
@@ -238,7 +239,7 @@
 .projects__group--image {
   padding-bottom: 15px;
 }
-@media only screen and (max-width: 480px) and (orientation: landscape) {
+@media only screen and (max-width: 812px) and (orientation: landscape) {
   .projects__group--desc {
     overflow-wrap: break-word;
     width: 100px;
@@ -246,7 +247,7 @@
   }
 }
 
-@media only screen and (max-width: 480px) and (orientation: landscape) {
+@media only screen and (max-width: 812px) and (orientation: landscape) {
   .prjz {
     display: grid;
     grid-template-columns: auto auto auto;
