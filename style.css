@@ -130,6 +130,7 @@
   padding-top: 200px;
   position: sticky;
   top: 0;
+  left: 0;
   z-index: 0;
 }
 @media only screen and (min-width: 768px) {
@@ -182,6 +183,7 @@
   padding-right: 60px;
   position: sticky;
   top: 0;
+  left: 0;
   z-index: 1;
 }
 @media only screen and (min-width: 768px) {
@@ -231,10 +233,10 @@
   align-items: center;
   flex-wrap: nowrap;
   background-color: #e2ded3;
-  width: 100vw;
   position: sticky;
   top: 0;
   z-index: 2;
+  left: 0;
 }
 .skills__head {
   font-size: 200%;
@@ -284,6 +286,7 @@
   background-color: #857671;
   z-index: 3;
   width: 100vw;
+  left: 0;
 }
 .projects__head {
   font-size: 200%;

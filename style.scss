@@ -8,6 +8,7 @@
 // Add text on hover for contact icons & disable color change
 // Add link to project icons
 // Change Nav bar for bigger screens
+// Change everything from px to %
 
 @use "./partials/palette";
 @use "./partials/mixins";
@@ -121,10 +122,11 @@
     background-color: palette.$color-four;
     padding-right: 60px;
     padding-top: 200px;
-    // Sticky scroll effect
+
     position: sticky;
     top: 0;
-    // Section hides when scrolling down
+    left: 0;
+
     z-index: 0;
     @include devices.large {
         padding-top: 300px;
@@ -168,6 +170,7 @@
     padding-right: 60px;
     position: sticky;
     top: 0;
+    left: 0;
     z-index: 1;
     @include devices.large {
         @include mixins.flex(column, center, center, nowrap);
@@ -204,11 +207,10 @@
 .skills {
     @include mixins.flex(column, center, center, nowrap);
     background-color: palette.$color-four;
-    width: 100vw;
     position: sticky;
     top: 0;
     z-index: 2;
-
+    left: 0;
     &__head {
         font-size: 200%;
         font-weight: bolder;
@@ -248,6 +250,7 @@
     background-color: palette.$color-three;
     z-index: 3;
     width: 100vw;
+    left: 0;
 
     &__head {
         font-size: 200%;
