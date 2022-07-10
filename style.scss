@@ -4,9 +4,10 @@
 // Switch placeholder text in about me secion.
 // Add layout for tablet and laptop+.
 // Add a darker orange to palette for headings on darker sections.
-// Add project desc in tablet & greater
+// Add project desc in view query for tablet & greater
 // Add text on hover for contact icons & disable color change
 // Add link to project icons
+// Change Nav bar for bigger screens
 
 @use "./partials/palette";
 @use "./partials/mixins";
@@ -25,6 +26,7 @@
     height: 10vh;
     position: fixed;
     top: 0;
+    z-index: 4;
 
     @include devices.large {
         padding: 0;
@@ -39,6 +41,7 @@
             :hover,
             :focus {
                 color: white;
+                cursor: pointer;
             }
             padding-right: 50px;
             @include devices.large {
@@ -88,7 +91,13 @@
             font-size: 220%;
 
             font-weight: bolder;
-            color: palette.$color-one;
+            :link,
+            :visited,
+            :hover,
+            :active {
+                color: palette.$color-one;
+                text-decoration: none;
+            }
             @include devices.large {
                 font-size: 420%;
             }
@@ -104,6 +113,7 @@
 .section-block {
     width: 100vw;
     height: 100vh;
+    transform: translate3d(0, 0, 0);
 }
 // Landing
 .landing {
@@ -111,6 +121,11 @@
     background-color: palette.$color-four;
     padding-right: 60px;
     padding-top: 200px;
+    // Sticky scroll effect
+    position: sticky;
+    top: 0;
+    // Section hides when scrolling down
+    z-index: 0;
     @include devices.large {
         padding-top: 300px;
         padding-right: 500px;
@@ -151,6 +166,9 @@
     background-color: palette.$color-three;
     padding-top: 200px;
     padding-right: 60px;
+    position: sticky;
+    top: 0;
+    z-index: 1;
     @include devices.large {
         @include mixins.flex(column, center, center, nowrap);
         padding: 0;
@@ -186,6 +204,10 @@
 .skills {
     @include mixins.flex(column, center, center, nowrap);
     background-color: palette.$color-four;
+    width: 100vw;
+    position: sticky;
+    top: 0;
+    z-index: 2;
 
     &__head {
         font-size: 200%;
@@ -222,8 +244,11 @@
 
 // Projects
 .projects {
-    @include mixins.flex(column, center, center, wrap);
+    @include mixins.flex(column, center, center, nowrap);
     background-color: palette.$color-three;
+    z-index: 3;
+    width: 100vw;
+
     &__head {
         font-size: 200%;
         font-weight: bolder;
@@ -287,6 +312,7 @@
     align-content: center;
     padding-left: 15px;
     padding-bottom: 15px;
+    z-index: 4;
     @include devices.large {
         font-size: 300%;
         padding-left: 50px;
@@ -294,17 +320,17 @@
     &__contact {
         &--icon {
             padding: 10px;
-            a:link {
+            :link {
                 color: black;
             }
-            a:hover {
-                color: white;
+            :hover {
+                color: palette.$color-one;
             }
-            a:visited {
+            :visited {
                 color: black;
             }
-            a:active {
-                color: black;
+            :active {
+                color: palette.$color-one;
             }
         }
     }

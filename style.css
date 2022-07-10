@@ -15,6 +15,7 @@
   height: 10vh;
   position: fixed;
   top: 0;
+  z-index: 4;
 }
 @media only screen and (min-width: 768px) {
   .header {
@@ -32,6 +33,7 @@
 .header__drop-nav--dropbtn :hover,
 .header__drop-nav--dropbtn :focus {
   color: white;
+  cursor: pointer;
 }
 @media only screen and (min-width: 768px) {
   .header__drop-nav--dropbtn {
@@ -88,7 +90,13 @@
 .header__logo--style2 {
   font-size: 220%;
   font-weight: bolder;
+}
+.header__logo--style2 :link,
+.header__logo--style2 :visited,
+.header__logo--style2 :hover,
+.header__logo--style2 :active {
   color: #ff6d24;
+  text-decoration: none;
 }
 @media only screen and (min-width: 768px) {
   .header__logo--style2 {
@@ -108,6 +116,7 @@
 .section-block {
   width: 100vw;
   height: 100vh;
+  transform: translate3d(0, 0, 0);
 }
 
 .landing {
@@ -119,6 +128,9 @@
   background-color: #e2ded3;
   padding-right: 60px;
   padding-top: 200px;
+  position: sticky;
+  top: 0;
+  z-index: 0;
 }
 @media only screen and (min-width: 768px) {
   .landing {
@@ -168,6 +180,9 @@
   background-color: #857671;
   padding-top: 200px;
   padding-right: 60px;
+  position: sticky;
+  top: 0;
+  z-index: 1;
 }
 @media only screen and (min-width: 768px) {
   .about-me {
@@ -216,6 +231,10 @@
   align-items: center;
   flex-wrap: nowrap;
   background-color: #e2ded3;
+  width: 100vw;
+  position: sticky;
+  top: 0;
+  z-index: 2;
 }
 .skills__head {
   font-size: 200%;
@@ -261,8 +280,10 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   background-color: #857671;
+  z-index: 3;
+  width: 100vw;
 }
 .projects__head {
   font-size: 200%;
@@ -342,6 +363,7 @@
   align-content: center;
   padding-left: 15px;
   padding-bottom: 15px;
+  z-index: 4;
 }
 @media only screen and (min-width: 768px) {
   .footer {
@@ -352,15 +374,15 @@
 .footer__contact--icon {
   padding: 10px;
 }
-.footer__contact--icon a:link {
+.footer__contact--icon :link {
   color: black;
 }
-.footer__contact--icon a:hover {
-  color: white;
+.footer__contact--icon :hover {
+  color: #ff6d24;
 }
-.footer__contact--icon a:visited {
+.footer__contact--icon :visited {
   color: black;
 }
-.footer__contact--icon a:active {
-  color: black;
+.footer__contact--icon :active {
+  color: #ff6d24;
 }
