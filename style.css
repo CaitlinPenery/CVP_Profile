@@ -16,9 +16,9 @@
   position: fixed;
   top: 0;
 }
-@media only screen and (max-width: 812px) and (orientation: landscape) {
+@media only screen and (min-width: 768px) {
   .header {
-    padding-top: 20px;
+    padding: 0;
     height: 20vh;
   }
 }
@@ -27,11 +27,16 @@
   display: inline-block;
 }
 .header__drop-nav--dropbtn {
-  padding-right: 30px;
+  padding-right: 50px;
 }
 .header__drop-nav--dropbtn :hover,
 .header__drop-nav--dropbtn :focus {
   color: white;
+}
+@media only screen and (min-width: 768px) {
+  .header__drop-nav--dropbtn {
+    font-size: 200%;
+  }
 }
 .header__drop-nav--content {
   display: none;
@@ -50,6 +55,11 @@
   display: block;
   text-align: right;
 }
+@media only screen and (min-width: 768px) {
+  .header__drop-nav--text {
+    font-size: 20px;
+  }
+}
 .header .show {
   display: block;
 }
@@ -61,14 +71,29 @@
   flex-wrap: nowrap;
   padding-left: 20px;
 }
+@media only screen and (min-width: 768px) {
+  .header__logo {
+    padding-left: 50px;
+  }
+}
 .header__logo--style1 {
   font-size: 250%;
   font-weight: bolder;
+}
+@media only screen and (min-width: 768px) {
+  .header__logo--style1 {
+    font-size: 450%;
+  }
 }
 .header__logo--style2 {
   font-size: 220%;
   font-weight: bolder;
   color: #ff6d24;
+}
+@media only screen and (min-width: 768px) {
+  .header__logo--style2 {
+    font-size: 420%;
+  }
 }
 
 .content {
@@ -95,9 +120,10 @@
   padding-right: 60px;
   padding-top: 200px;
 }
-@media only screen and (max-width: 812px) and (orientation: landscape) {
+@media only screen and (min-width: 768px) {
   .landing {
-    padding-top: 120px;
+    padding-top: 300px;
+    padding-right: 500px;
   }
 }
 .landing__head--one {
@@ -105,10 +131,20 @@
   font-weight: bolder;
   font-size: 200%;
 }
+@media only screen and (min-width: 768px) {
+  .landing__head--one {
+    font-size: 500%;
+  }
+}
 .landing__head--two {
   color: black;
   font-weight: bold;
   font-size: 220%;
+}
+@media only screen and (min-width: 768px) {
+  .landing__head--two {
+    font-size: 540%;
+  }
 }
 .landing__head--three {
   color: black;
@@ -116,6 +152,11 @@
 }
 .landing__head--three-style {
   color: #ff6d24;
+}
+@media only screen and (min-width: 768px) {
+  .landing__head--three {
+    font-size: 400%;
+  }
 }
 
 .about-me {
@@ -128,11 +169,11 @@
   padding-top: 200px;
   padding-right: 60px;
 }
-@media only screen and (max-width: 812px) and (orientation: landscape) {
+@media only screen and (min-width: 768px) {
   .about-me {
     display: flex;
     flex-direction: column;
-    justify-content: top;
+    justify-content: center;
     align-items: center;
     flex-wrap: nowrap;
     padding: 0;
@@ -144,9 +185,9 @@
   padding-bottom: 20px;
   color: #ff6d24;
 }
-@media only screen and (max-width: 812px) and (orientation: landscape) {
+@media only screen and (min-width: 768px) {
   .about-me__head {
-    font-size: 130%;
+    font-size: 500%;
     padding: 15px;
   }
 }
@@ -156,20 +197,16 @@
   text-align: right;
   font-weight: bold;
 }
-.about-me__card--text {
-  padding-bottom: 15px;
-}
-@media only screen and (max-width: 812px) and (orientation: landscape) {
-  .about-me__card--text {
-    font-size: 100%;
-  }
-}
-@media only screen and (max-width: 812px) and (orientation: landscape) {
+@media only screen and (min-width: 768px) {
   .about-me__card {
     text-align: center;
-    font-size: 100%;
-    font-weight: normal;
+    font-size: 150%;
+    font-weight: bold;
+    width: 400px;
   }
+}
+.about-me__card--text {
+  padding-bottom: 15px;
 }
 
 .skills {
@@ -186,6 +223,12 @@
   padding: 20px;
   color: #ff6d24;
 }
+@media only screen and (min-width: 768px) {
+  .skills__head {
+    font-size: 500%;
+    padding: 40px;
+  }
+}
 .skills__card {
   display: flex;
   flex-direction: column;
@@ -194,16 +237,22 @@
   flex-wrap: nowrap;
   padding: 10px;
 }
+@media only screen and (min-width: 768px) {
+  .skills__card {
+    padding: 50px;
+  }
+}
 .skills__card--text {
   font-weight: bold;
   padding-top: 5px;
 }
 
-@media only screen and (max-width: 812px) and (orientation: landscape) {
+@media only screen and (min-width: 768px) {
   .sklz {
     display: grid;
     grid-template-columns: auto auto auto;
     justify-items: center;
+    font-size: 200%;
   }
 }
 
@@ -221,6 +270,11 @@
   padding: 20px;
   color: #ff6d24;
 }
+@media only screen and (min-width: 768px) {
+  .projects__head {
+    font-size: 500%;
+  }
+}
 .projects__group {
   display: flex;
   flex-direction: column;
@@ -229,9 +283,9 @@
   flex-wrap: nowrap;
   padding: 10px;
 }
-@media only screen and (max-width: 812px) and (orientation: landscape) {
+@media only screen and (min-width: 768px) {
   .projects__group {
-    padding: 13px;
+    padding: 50px;
     align-items: center;
     justify-content: center;
   }
@@ -239,15 +293,28 @@
 .projects__group--image {
   padding-bottom: 15px;
 }
-@media only screen and (max-width: 812px) and (orientation: landscape) {
+@media only screen and (min-width: 768px) {
+  .projects__group--image {
+    width: 300px;
+    height: 300px;
+  }
+}
+@media only screen and (min-width: 768px) {
   .projects__group--desc {
     overflow-wrap: break-word;
-    width: 100px;
+    width: 200px;
     text-align: center;
+    font-size: 200%;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .projects__group--icon {
+    font-size: 200%;
+    padding-top: 20px;
   }
 }
 
-@media only screen and (max-width: 812px) and (orientation: landscape) {
+@media only screen and (min-width: 768px) {
   .prjz {
     display: grid;
     grid-template-columns: auto auto auto;
@@ -275,6 +342,12 @@
   align-content: center;
   padding-left: 15px;
   padding-bottom: 15px;
+}
+@media only screen and (min-width: 768px) {
+  .footer {
+    font-size: 300%;
+    padding-left: 50px;
+  }
 }
 .footer__contact--icon {
   padding: 10px;

@@ -1,22 +1,5 @@
-@mixin phone {
-    @media only screen and (max-width: 812px) {
-        @content;
-    }
-}
-@mixin phone_landscape {
-    @media only screen and (max-width: 812px) and (orientation: landscape) {
-        @content;
-    }
-}
-
-@mixin tablet {
-    @media only screen and (min-width: ($sm + 1)) and (max-width: $md) {
-        @content;
-    }
-}
-
-@mixin tablet-landscape_laptop {
-    @media only screen and (min-width: ($lg)) {
+@mixin large {
+    @media only screen and (min-width: 768px) {
         @content;
     }
 }
