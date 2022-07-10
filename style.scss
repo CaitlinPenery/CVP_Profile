@@ -6,9 +6,11 @@
 // Add a darker orange to palette for headings on darker sections.
 // Add project desc in tablet & greater
 // Add text on hover for contact icons & disable color change
+// Add link to project icons
 
 @use "./partials/palette";
 @use "./partials/mixins";
+@use "./partials/devices";
 
 * {
     padding: 0;
@@ -23,7 +25,43 @@
     height: 10vh;
     position: fixed;
     top: 0;
-    z-index: 2;
+
+    @include devices.phone_landscape {
+        padding-top: 20px;
+    }
+
+    // CSS for drop button
+    &__drop-nav {
+        position: relative;
+        display: inline-block;
+        &--dropbtn {
+            :hover,
+            :focus {
+                color: white;
+            }
+            padding-right: 30px;
+        }
+        &--content {
+            display: none;
+            position: absolute;
+            background-color: rgba(255, 255, 255, 0.5);
+            min-width: 120px;
+            z-index: 1;
+            right: 0;
+            padding: 10px;
+        }
+        &--text {
+            color: black;
+            font-weight: bolder;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: right;
+        }
+    }
+    .show {
+        display: block;
+    }
 
     &__logo {
         @include mixins.flex(row, center, center, nowrap);
@@ -38,27 +76,6 @@
 
             font-weight: bolder;
             color: palette.$color-one;
-        }
-    }
-
-    &__drop-nav {
-        padding-right: 30px;
-    }
-    &__dropdown {
-        &--btn {
-            background-color: bisque;
-            color: black;
-            padding: 16px;
-            font-size: 16px;
-            border: none;
-        }
-        &--content {
-            display: none;
-            position: absolute;
-            background-color: aquamarine;
-            min-width: 160px;
-            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-            z-index: 1;
         }
     }
 }
@@ -78,6 +95,10 @@
     background-color: palette.$color-four;
     padding-right: 60px;
     padding-top: 200px;
+    @include devices.phone_landscape {
+        padding-top: 120px;
+    }
+
     &__head {
         &--one {
             color: palette.$color-one;
@@ -104,11 +125,19 @@
     background-color: palette.$color-three;
     padding-top: 200px;
     padding-right: 60px;
+    @include devices.phone_landscape {
+        @include mixins.flex(column, top, center, nowrap);
+        padding: 0;
+    }
     &__head {
         font-size: 200%;
         font-weight: bolder;
         padding-bottom: 20px;
         color: palette.$color-one;
+        @include devices.phone_landscape {
+            font-size: 130%;
+            padding: 15px;
+        }
     }
     &__card {
         height: 100px;
@@ -117,6 +146,14 @@
         font-weight: bold;
         &--text {
             padding-bottom: 15px;
+            @include devices.phone_landscape {
+                font-size: 100%;
+            }
+        }
+        @include devices.phone_landscape {
+            text-align: center;
+            font-size: 100%;
+            font-weight: normal;
         }
     }
 }
@@ -124,6 +161,7 @@
 .skills {
     @include mixins.flex(column, center, center, nowrap);
     background-color: palette.$color-four;
+
     &__head {
         font-size: 200%;
         font-weight: bolder;
@@ -134,10 +172,20 @@
     &__card {
         @include mixins.flex(column, center, center, nowrap);
         padding: 10px;
+        @include devices.phone_landscape {
+        }
         &--text {
             font-weight: bold;
             padding-top: 5px;
         }
+    }
+}
+
+.sklz {
+    @include devices.phone_landscape {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        justify-items: center;
     }
 }
 
@@ -153,11 +201,28 @@
     }
     &__group {
         @include mixins.flex(column, center, center, nowrap);
-
         padding: 10px;
+        @include devices.phone_landscape {
+            padding: 13px;
+            align-items: center;
+            justify-content: center;
+        }
         &--image {
             padding-bottom: 15px;
         }
+        &--desc {
+            @include devices.phone_landscape {
+                overflow-wrap: break-word;
+                width: 100px;
+                text-align: center;
+            }
+        }
+    }
+}
+.prjz {
+    @include devices.phone_landscape {
+        display: grid;
+        grid-template-columns: auto auto auto;
     }
 }
 #code {
@@ -180,6 +245,18 @@
     &__contact {
         &--icon {
             padding: 10px;
+            a:link {
+                color: black;
+            }
+            a:hover {
+                color: white;
+            }
+            a:visited {
+                color: black;
+            }
+            a:active {
+                color: black;
+            }
         }
     }
 }

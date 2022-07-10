@@ -15,15 +15,45 @@
             defer
             crossorigin="anonymous"
         ></script>
+        <script src="index.js"></script>
         <!-- update below with correct title -->
-        <title>Caitlin Penery | Dev</title>
+        <title>Caitlin Penery | Dev</span></title>
     </head>
     <body id="home">
         <header class="header">
             <!-- Add drop down menu -->
-            <div class="header__drop-nav">
-                <i class="fa-solid fa-bars fa-2x"></i>
+            <div class="header__drop-nav dropdown">
+                <div
+                    class="header__drop-nav--dropbtn dropbtn"
+                    onclick="myDrpBtn()"
+                >
+                    <i class="fa-solid fa-bars fa-3x"></i>
+                </div>
+                <div
+                    class="header__drop-nav--content dropdown-content"
+                    id="myDropdown"
+                >
+                    <a class="header__drop-nav--text dropbtn--text" href="#home"
+                        >Home</a
+                    >
+                    <a
+                        class="header__drop-nav--text dropbtn--text"
+                        href="#about-me"
+                        >About Me</a
+                    >
+                    <a
+                        class="header__drop-nav--text dropbtn--text"
+                        href="#skills"
+                        >Skills</a
+                    >
+                    <a
+                        class="header__drop-nav--text dropbtn--text"
+                        href="#projects"
+                        >Projects</a
+                    >
+                </div>
             </div>
+
             <!-- header logo -->
             <div class="header__logo">
                 <h2 class="header__logo--style1">C</h2>
@@ -43,7 +73,7 @@
                 </h3>
             </section>
             <!-- About Me Section -->
-            <section class="about-me section-block">
+            <section id="about-me" class="about-me section-block">
                 <h2 class="about-me__head">About Me</h2>
                 <div class="about-me__card">
                     <!-- Worky Experience Stuff -->
@@ -61,90 +91,96 @@
                 </div>
             </section>
             <!-- Skills Section -->
-            <section class="skills section-block">
+            <section id="skills" class="skills section-block">
                 <h2 class="skills__head">Skills</h2>
-                <div class="skills__card">
-                    <i
-                        class="fa-brands fa-html5 fa-3x skills__card--item-icon"
-                    ></i>
-                    <p class="skills__card--text">HTML5</p>
-                </div>
-                <div class="skills__card">
-                    <i
-                        class="fa-brands fa-github-square fa-3x skills__card--item-icon"
-                    ></i>
-                    <p class="skills__card--text">git</p>
-                </div>
-                <div class="skills__card">
-                    <i
-                        class="fa-brands fa-sass fa-3x skills__card--item-icon"
-                    ></i>
-                    <p class="skills__card--text">SCSS</p>
-                </div>
-                <div class="skills__card">
-                    <i
-                        class="fa-brands fa-css3-alt fa-3x skills__card--item-icon"
-                    ></i>
-                    <p class="skills__card--text">CSS3</p>
-                </div>
-                <div class="skills__card">
-                    <i
-                        class="fa-brands fa-js-square fa-3x skills__card--item-icon"
-                    ></i>
-                    <p class="skills__card--text">JavaScript</p>
-                </div>
-                <div class="skills__card">
-                    <i
-                        class="fa-brands fa-react fa-3x skills__card--item-icon"
-                    ></i>
-                    <p class="skills__card--text">React</p>
+                <div class="sklz">
+                    <div class="skills__card">
+                        <i
+                            class="fa-brands fa-html5 fa-3x skills__card--item-icon"
+                        ></i>
+                        <p class="skills__card--text">HTML5</p>
+                    </div>
+                    <div class="skills__card">
+                        <i
+                            class="fa-brands fa-github-square fa-3x skills__card--item-icon"
+                        ></i>
+                        <p class="skills__card--text">git</p>
+                    </div>
+                    <div class="skills__card">
+                        <i
+                            class="fa-brands fa-sass fa-3x skills__card--item-icon"
+                        ></i>
+                        <p class="skills__card--text">SCSS</p>
+                    </div>
+                    <div class="skills__card">
+                        <i
+                            class="fa-brands fa-css3-alt fa-3x skills__card--item-icon"
+                        ></i>
+                        <p class="skills__card--text">CSS3</p>
+                    </div>
+                    <div class="skills__card">
+                        <i
+                            class="fa-brands fa-js-square fa-3x skills__card--item-icon"
+                        ></i>
+                        <p class="skills__card--text">JavaScript</p>
+                    </div>
+                    <div class="skills__card">
+                        <i
+                            class="fa-brands fa-react fa-3x skills__card--item-icon"
+                        ></i>
+                        <p class="skills__card--text">React</p>
+                    </div>
                 </div>
             </section>
             <!-- Projects Section -->
-            <section class="projects section-block">
+            <section id="projects" class="projects section-block">
                 <h2 class="projects__head">Projects</h2>
                 <!-- Seperate div for each project, each project has a title-->
-                <div class="projects__group">
-                    <img
-                        class="projects__group--image"
-                        src=".\Images\JS Calculator.png"
-                        width="100px"
-                        height="100px"
-                        alt="JavaScript Calculator"
-                    />
-                    <h3 class="projects__group--desc">JavaScript Calculator</h3>
-                    <span class="projects__group--icon"
-                        ><i class="fa-solid fa-code" id="code"></i
-                        ><i class="fa-solid fa-rocket" id="rocket"></i
-                    ></span>
-                </div>
-                <div class="projects__group">
-                    <img
-                        class="projects__group--image"
-                        src=".\Images\JS Calculator.png"
-                        width="100px"
-                        height="100px"
-                        alt="JavaScript Calculator"
-                    />
-                    <h3 class="projects__group--desc">Morse Translator</h3>
-                    <span class="projects__group--icon"
-                        ><i class="fa-solid fa-code" id="code"></i
-                        ><i class="fa-solid fa-rocket" id="rocket"></i
-                    ></span>
-                </div>
-                <div class="projects__group">
-                    <img
-                        class="projects__group--image"
-                        src=".\Images\JS Calculator.png"
-                        width="100px"
-                        height="100px"
-                        alt="JavaScript Calculator"
-                    />
-                    <h3 class="projects__group--desc">React e-Shop</h3>
-                    <span class="projects__group--icon"
-                        ><i class="fa-solid fa-code" id="code"></i
-                        ><i class="fa-solid fa-rocket" id="rocket"></i
-                    ></span>
+                <div class="prjz">
+                    <div class="projects__group">
+                        <img
+                            class="projects__group--image"
+                            src=".\Images\JS Calculator.png"
+                            width="100px"
+                            height="100px"
+                            alt="JavaScript Calculator"
+                        />
+                        <h3 class="projects__group--desc">
+                            JavaScript Calculator
+                        </h3>
+                        <span class="projects__group--icon"
+                            ><i class="fa-solid fa-code" id="code"></i
+                            ><i class="fa-solid fa-rocket" id="rocket"></i
+                        ></span>
+                    </div>
+                    <div class="projects__group">
+                        <img
+                            class="projects__group--image"
+                            src=".\Images\JS Calculator.png"
+                            width="100px"
+                            height="100px"
+                            alt="JavaScript Calculator"
+                        />
+                        <h3 class="projects__group--desc">Morse Translator</h3>
+                        <span class="projects__group--icon"
+                            ><i class="fa-solid fa-code" id="code"></i
+                            ><i class="fa-solid fa-rocket" id="rocket"></i
+                        ></span>
+                    </div>
+                    <div class="projects__group">
+                        <img
+                            class="projects__group--image"
+                            src=".\Images\JS Calculator.png"
+                            width="100px"
+                            height="100px"
+                            alt="JavaScript Calculator"
+                        />
+                        <h3 class="projects__group--desc">React e-Shop</h3>
+                        <span class="projects__group--icon"
+                            ><i class="fa-solid fa-code" id="code"></i
+                            ><i class="fa-solid fa-rocket" id="rocket"></i
+                        ></span>
+                    </div>
                 </div>
             </section>
         </div>
