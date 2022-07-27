@@ -8,7 +8,6 @@
 // Add text on hover for contact icons & disable color change
 // Add link to project icons
 // Change Nav bar for bigger screens
-// Change everything from px to %
 
 @use "./partials/palette";
 @use "./partials/mixins";
@@ -31,7 +30,7 @@
 
     @include devices.large {
         padding: 0;
-        height: 20vh;
+        height: 15vh;
     }
 
     // CSS for drop button
@@ -41,7 +40,7 @@
         &--dropbtn {
             :hover,
             :focus {
-                color: white;
+                color: palette.$color-one;
                 cursor: pointer;
             }
             padding-right: 50px;
@@ -125,7 +124,6 @@
 
     position: sticky;
     top: 0;
-    left: 0;
 
     z-index: 0;
     @include devices.large {
@@ -170,7 +168,6 @@
     padding-right: 60px;
     position: sticky;
     top: 0;
-    left: 0;
     z-index: 1;
     @include devices.large {
         @include mixins.flex(column, center, center, nowrap);
@@ -207,10 +204,11 @@
 .skills {
     @include mixins.flex(column, center, center, nowrap);
     background-color: palette.$color-four;
+    width: 100vw;
     position: sticky;
     top: 0;
     z-index: 2;
-    left: 0;
+
     &__head {
         font-size: 200%;
         font-weight: bolder;
@@ -250,7 +248,6 @@
     background-color: palette.$color-three;
     z-index: 3;
     width: 100vw;
-    left: 0;
 
     &__head {
         font-size: 200%;
@@ -270,10 +267,11 @@
             justify-content: center;
         }
         &--image {
-            padding-bottom: 15px;
+            // padding-bottom: 15px;
+            border-radius: 17px;
             @include devices.large {
-                width: 300px;
-                height: 300px;
+                width: 200px;
+                height: 200px;
             }
         }
         &--desc {
@@ -285,6 +283,18 @@
             }
         }
         &--icon {
+            :link {
+                color: black;
+            }
+            :hover {
+                color: palette.$color-one;
+            }
+            :visited {
+                color: black;
+            }
+            :active {
+                color: palette.$color-one;
+            }
             @include devices.large {
                 font-size: 200%;
                 padding-top: 20px;
@@ -296,12 +306,13 @@
     @include devices.large {
         display: grid;
         grid-template-columns: auto auto auto;
+        padding-bottom: 100px;
     }
 }
-#code {
+.code {
     padding: 10px;
 }
-#rocket {
+.rocket {
     padding: 10px;
 }
 
@@ -316,6 +327,7 @@
     padding-left: 15px;
     padding-bottom: 15px;
     z-index: 4;
+    font-size: 150%;
     @include devices.large {
         font-size: 300%;
         padding-left: 50px;

@@ -20,7 +20,7 @@
 @media only screen and (min-width: 768px) {
   .header {
     padding: 0;
-    height: 20vh;
+    height: 15vh;
   }
 }
 .header__drop-nav {
@@ -32,7 +32,7 @@
 }
 .header__drop-nav--dropbtn :hover,
 .header__drop-nav--dropbtn :focus {
-  color: white;
+  color: #ff6d24;
   cursor: pointer;
 }
 @media only screen and (min-width: 768px) {
@@ -130,7 +130,6 @@
   padding-top: 200px;
   position: sticky;
   top: 0;
-  left: 0;
   z-index: 0;
 }
 @media only screen and (min-width: 768px) {
@@ -183,7 +182,6 @@
   padding-right: 60px;
   position: sticky;
   top: 0;
-  left: 0;
   z-index: 1;
 }
 @media only screen and (min-width: 768px) {
@@ -233,10 +231,10 @@
   align-items: center;
   flex-wrap: nowrap;
   background-color: #e2ded3;
+  width: 100vw;
   position: sticky;
   top: 0;
   z-index: 2;
-  left: 0;
 }
 .skills__head {
   font-size: 200%;
@@ -286,7 +284,6 @@
   background-color: #857671;
   z-index: 3;
   width: 100vw;
-  left: 0;
 }
 .projects__head {
   font-size: 200%;
@@ -315,12 +312,12 @@
   }
 }
 .projects__group--image {
-  padding-bottom: 15px;
+  border-radius: 17px;
 }
 @media only screen and (min-width: 768px) {
   .projects__group--image {
-    width: 300px;
-    height: 300px;
+    width: 200px;
+    height: 200px;
   }
 }
 @media only screen and (min-width: 768px) {
@@ -330,6 +327,18 @@
     text-align: center;
     font-size: 200%;
   }
+}
+.projects__group--icon :link {
+  color: black;
+}
+.projects__group--icon :hover {
+  color: #ff6d24;
+}
+.projects__group--icon :visited {
+  color: black;
+}
+.projects__group--icon :active {
+  color: #ff6d24;
 }
 @media only screen and (min-width: 768px) {
   .projects__group--icon {
@@ -342,14 +351,15 @@
   .prjz {
     display: grid;
     grid-template-columns: auto auto auto;
+    padding-bottom: 100px;
   }
 }
 
-#code {
+.code {
   padding: 10px;
 }
 
-#rocket {
+.rocket {
   padding: 10px;
 }
 
@@ -367,6 +377,7 @@
   padding-left: 15px;
   padding-bottom: 15px;
   z-index: 4;
+  font-size: 150%;
 }
 @media only screen and (min-width: 768px) {
   .footer {
